@@ -1,16 +1,16 @@
 CREATE TABLE Members (
   MemberID INTEGER PRIMARY KEY,
-  RankID VARCHAR,
-  FirstName VARCHAR,
-  LastName VARCHAR,
+  RankID VARCHAR (255),
+  FirstName VARCHAR (255),
+  LastName VARCHAR (255),
   DateOfBirth DATE,
-  Gender VARCHAR,
-  ContactNumber VARCHAR,
-  EmergencyContactNumber VARCHAR,
-  Email VARCHAR,
+  Gender VARCHAR (255),
+  ContactNumber VARCHAR (255),
+  EmergencyContactNumber VARCHAR (255),
+  Email VARCHAR (255),
   Address TEXT,
   EnrollmentDate DATE,
-  Status VARCHAR
+  Status VARCHAR (255)
 );
 
 CREATE TABLE MemberInstructors (
@@ -21,19 +21,19 @@ CREATE TABLE MemberInstructors (
 
 CREATE TABLE Instructors (
   InstructorID INTEGER PRIMARY KEY,
-  FirstName VARCHAR,
-  LastName VARCHAR,
+  FirstName VARCHAR (255),
+  LastName VARCHAR (255),
   Qualification TEXT,
   Experience INTEGER,
-  ContactNumber VARCHAR,
-  Email VARCHAR
+  ContactNumber VARCHAR (255),
+  Email VARCHAR (255)
 );
 
 CREATE TABLE BeltRanks (
   RankID INTEGER PRIMARY KEY,
-  RankName VARCHAR,
+  RankName VARCHAR (255),
   Description TEXT,
-  Color VARCHAR
+  Color VARCHAR (255)
 );
 
 CREATE TABLE BeltTests (
@@ -42,7 +42,7 @@ CREATE TABLE BeltTests (
   InstructorID INTEGER,
   RankID INTEGER,
   TestDate DATE,
-  Result VARCHAR
+  Result VARCHAR (255)
 );
 
 CREATE TABLE SubscriptionPeriods (
@@ -59,5 +59,5 @@ CREATE TABLE Payments (
   MemberID INTEGER,
   Amount DECIMAL,
   PaymentDate DATE,
-  PaymentMethod VARCHAR
+  PaymentMethod VARCHAR (255)
 );
